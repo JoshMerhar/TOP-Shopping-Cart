@@ -6,25 +6,30 @@
 
 .container {
   width: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 6rem auto;
 }
 
 .side-bar {
   grid-column: 1 / 3;
-  text-align: center;
+  height: 100%;
 }
 
-.main-content {
+.main-content-area {
   grid-column: 3 / 11;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  background-color: lightblue;
 }
 
 .top-banner {
-  width: 100%;
+  grid-column: 1 / 11;
   background-color: steelblue;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
 }
