@@ -1,0 +1,29 @@
+.item-card {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 4px solid black;
+    background-color: white;
+}
+
+.item-picture {
+    height: 60%;
+    padding: 1rem;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-info {
+    width: 100%;
+}
+
+.item-name {
+    font-weight: bold;
+}

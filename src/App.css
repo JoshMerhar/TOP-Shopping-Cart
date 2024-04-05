@@ -8,28 +8,31 @@
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   grid-template-rows: 6rem auto;
 }
 
 .side-bar {
-  grid-column: 1 / 3;
-  height: 100%;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  background-color: lightgreen;
 }
 
 .main-content-area {
-  grid-column: 3 / 11;
+  grid-column: 4 / 21;
   height: 100%;
   text-align: center;
   background-color: lightblue;
 }
 
 .top-banner {
-  grid-column: 1 / 11;
+  grid-column: 4 / 21;
   background-color: steelblue;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   font-weight: bold;
+  position: sticky;
+  top: 0;
 }

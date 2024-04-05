@@ -10,7 +10,7 @@ const Router = () => {
             errorElement: <ErrorPage />,
         },
         {
-            path: '/:name',
+            path: ':name',
             element: <App />,
         },
     ]);
