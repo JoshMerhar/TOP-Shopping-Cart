@@ -1,3 +1,26 @@
-.cart-page {
-    font-style: italic;
+.cart-title {
+    font-style: italic
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+}
+
+.cart-picture {
+    width: 150px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cart-item-info {
+
 }

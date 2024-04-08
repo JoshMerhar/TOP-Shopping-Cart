@@ -26,6 +26,7 @@
 }
 
 .top-banner {
+  z-index: 1;
   grid-column: 4 / 21;
   background-color: steelblue;
   display: flex;

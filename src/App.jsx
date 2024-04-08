@@ -11,6 +11,7 @@ function App() {
   const { name } = useParams();
 
   const [itemData, setItemData] = useState([]);
+  const [cart, setCart] = useState([]);
 
   if (itemData.length === 0) {
     fetch('https://fakestoreapi.com/products')
@@ -33,9 +34,13 @@ function App() {
         </div>
         <div className="main-content-area">
           {name === 'shop' ? (
-            <Shop itemData={itemData} />
+            <Shop 
+              itemData={itemData} 
+              setCart={setCart}
+              cart={cart}
+            />
           ) : name === 'cart' ? (
-            <Cart />
+            <Cart cart={cart}/>
           ) : (
             <Home />
           )}
