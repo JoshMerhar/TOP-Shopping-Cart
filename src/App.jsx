@@ -40,7 +40,10 @@ function App() {
               cart={cart}
             />
           ) : name === 'cart' ? (
-            <Cart cart={cart}/>
+            <Cart 
+              cart={cart} 
+              setCart={setCart}
+            />
           ) : (
             <Home />
           )}

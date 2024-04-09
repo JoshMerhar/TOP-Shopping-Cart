@@ -40,7 +40,6 @@ const ItemCard = ({ id, title, price, description, image, rating, cart, setCart 
         setCart([...cart, {id, title, itemAmount, price, image}]) 
       }
       setItemAmount(1);
-      console.log(cart);
     }
 
     return (
@@ -50,7 +49,7 @@ const ItemCard = ({ id, title, price, description, image, rating, cart, setCart 
         </div>
         <div className='item-info'>
           <div className='item-name'>{title}</div>
-          <div className='item-price'>Price: ${price}</div>
+          <div className='item-price'>Price: ${price.toFixed(2)}</div>
           <div className='item-rating'>Rating: {rating.rate} / 5</div>
           <div className='item-buttons'>
             <span className='qty'>Qty.</span>
