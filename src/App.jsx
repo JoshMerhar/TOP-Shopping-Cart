@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
@@ -13,11 +13,13 @@ function App() {
   const [itemData, setItemData] = useState([]);
   const [cart, setCart] = useState([]);
 
-  if (itemData.length === 0) {
-    fetch('https://fakestoreapi.com/products')
-            .then(response=>response.json())
-            .then(json=>setItemData([...json]));
+  useEffect(() => {
+    if (itemData.length === 0) {
+      fetch('https://fakestoreapi.com/products')
+        .then(response=>response.json())
+        .then(json=>setItemData([...json]));
     }
+  }, [itemData.length]);
 
   if (name && name !== 'shop' && name !== 'cart') {
     return <ErrorPage />
@@ -30,14 +32,16 @@ function App() {
           <span>Ultra Mega Super Store</span>
         </div>
         <div className="side-bar">
-          <NavBar />
+          <NavBar 
+            cart={cart}
+          />
         </div>
         <div className="main-content-area">
           {name === 'shop' ? (
             <Shop 
-              itemData={itemData} 
-              setCart={setCart}
+              itemData={itemData}
               cart={cart}
+              setCart={setCart}
             />
           ) : name === 'cart' ? (
             <Cart 

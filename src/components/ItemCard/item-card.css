@@ -91,5 +91,11 @@ img {
 .add-to-cart-button {
     color: white;
     background-color: steelblue;
+    border-style: none;
     border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: lightgreen;
+    color: black;
 }

@@ -35,7 +35,38 @@ img {
     justify-content: center;
 }
 
+.remove-item-button {
+    border-style: none;
+    color: white;
+    background-color: red;
+}
+
+.remove-item-button:hover {
+    background-color: salmon;
+}
+
+.total-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
 .total-cost {
     font-weight: bold;
     font-size: 42px;
+}
+
+.checkout-button {
+    border-style: none;
+    color: white;
+    background-color: green;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.checkout-button:hover {
+    color: black;
+    background-color: lightgreen;
 }

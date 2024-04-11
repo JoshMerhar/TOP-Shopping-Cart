@@ -7,6 +7,7 @@ const Cart = ({ cart, setCart }) => {
 
     useEffect(() => {
       tallyTotal();
+      window.scrollTo(0,0);
     });
 
     function tallyTotal() {
@@ -22,6 +23,11 @@ const Cart = ({ cart, setCart }) => {
       const oldCart = [...cart];
       const newCart= oldCart.filter((item) => item.id !== id);
       setCart(newCart);
+    }
+
+    function checkout() {
+      setCart([]);
+      setTotal(0);
     }
 
     return (
@@ -43,7 +49,10 @@ const Cart = ({ cart, setCart }) => {
             </div>
           ))}
         </div>
-        <div className='total-cost' style={{display: cart.length === 0 ? 'none' : 'block'}}>Total: ${total}</div>
+        <div className='total-container' style={{display: cart.length === 0 ? 'none' : 'flex'}}>
+          <div className='total-cost'>Total: ${total}</div>
+          <button type='button' className='checkout-button' onClick={() => checkout()}>Checkout</button>
+        </div>
       </div>
     )
 }

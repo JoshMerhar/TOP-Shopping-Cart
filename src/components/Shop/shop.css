@@ -3,6 +3,7 @@
 }
 
 .shop-heading {
+    display: none;
     margin: 0;
     font-size: 36px;
     font-style: italic;
@@ -17,4 +18,16 @@
 
 .card-container {
     width: 100%;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    font-size: 50px;
+}
+
+.loading-screen {
+    font-style: italic;
 }
