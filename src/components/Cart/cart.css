@@ -1,3 +1,12 @@
+.cart-page {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .cart-title {
     font-style: italic
 }
@@ -19,6 +28,7 @@
 .cart-picture {
     width: 150px;
     border: solid white 5px;
+    background-color: white;
 }
 
 img {
@@ -69,4 +79,14 @@ img {
 .checkout-button:hover {
     color: black;
     background-color: lightgreen;
+}
+
+.empty-cart-text,
+.checked-out-text {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.checked-out-text {
+    animation: fadeIn .75s;
 }

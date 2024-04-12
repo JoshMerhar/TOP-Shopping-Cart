@@ -4,6 +4,7 @@ import './cart.css';
 const Cart = ({ cart, setCart }) => {
 
     const [total, setTotal] = useState(0);
+    const [checkedOut, setCheckedOut] = useState(false);
 
     useEffect(() => {
       tallyTotal();
@@ -26,6 +27,7 @@ const Cart = ({ cart, setCart }) => {
     }
 
     function checkout() {
+      setCheckedOut(true);
       setCart([]);
       setTotal(0);
     }
@@ -33,7 +35,8 @@ const Cart = ({ cart, setCart }) => {
     return (
       <div className='cart-page'>
         <h1 className='cart-title'>Shopping Cart</h1>
-        <div className='empty-cart-text' style={{display: cart.length === 0 ? 'block' : 'none'}}>There's nothing in your cart!</div>
+        <div className='empty-cart-text' style={{display: cart.length === 0 && !checkedOut ? 'block' : 'none'}}>There's nothing in your cart!</div>
+        <div className='checked-out-text' style={{ display: checkedOut ? 'block' : 'none' }}>Thanks for shopping with us!</div>
         <div className='cart-items'>
           {cart.map((item) => (
             <div className='cart-item' key={`cart-${item.id}`}>

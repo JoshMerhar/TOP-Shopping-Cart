@@ -28,10 +28,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="top-banner">
-          <span>Ultra Mega Super Store</span>
-        </div>
-        <div className="side-bar">
+        <div className="top-nav-bar">
           <NavBar 
             cart={cart}
           />

@@ -8,32 +8,26 @@
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
+  grid-template-columns: repeat(auto-fill, 1fr);
   grid-template-rows: 6rem auto;
+  animation: fadeIn 1s;
 }
 
-.side-bar {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.top-nav-bar {
+  z-index: 1;
+  grid-row: 1 / 2;
   background-color: lightgreen;
+  position: sticky;
+  top: 0;
 }
 
 .main-content-area {
-  grid-column: 4 / 21;
   height: 100%;
   text-align: center;
   background-color: lightblue;
-}
-
-.top-banner {
-  z-index: 1;
-  grid-column: 4 / 21;
-  background-color: steelblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
 }

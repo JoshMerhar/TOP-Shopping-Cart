@@ -1,21 +1,41 @@
 .nav-bar {
     background-color: lightgreen;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
+    padding: 0 4rem;
+}
+
+.store-links {
+    display: flex;
 }
 
 .nav-item {
     font-size: 48px;
     font-weight: bold;
     color: black;
-    padding: 0 2rem;
+    padding: 0 1rem;
+}
+
+.nav-item:hover {
+    color: white;
 }
 
 .nav-cart {
     display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    height: 48px;
+    width: 48px;
+}
+
+svg:hover {
+    fill: white;
 }
 
 .cart-qty {
@@ -24,6 +44,7 @@
     width: 20px;
     display: inline-block;
     text-align: center;
+    place-self: flex-start;
     font-size: 14px;
     color: white;
     background-color: blue;

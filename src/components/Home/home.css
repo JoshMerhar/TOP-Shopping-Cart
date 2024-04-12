@@ -1,3 +1,51 @@
 .home-page {
+    height: 100%;
+    background-image: url('../../assets/pexels-engin-akyurt-3368291.jpg');
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.home-page-content {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+}
+
+.home-header {
+    font-size: 48px;
+    font-weight: bold;
     font-style: italic;
+}
+
+.home-subheader {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home-btn-container {
+    width: fit-content;
+}
+
+.home-shop-button {
+    width: 100%;
+    height: 100%;
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+    background-color: lightgreen;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+}
+
+.home-shop-button:hover {
+    background-color: lightblue;
+    color: white;
 }
