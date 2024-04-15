@@ -18,7 +18,9 @@ const Shop = ({ itemData, cart, setCart }) => {
 
     return (
         <div className="shop-page">
-          <span className="shop-heading" style={{ display: loadingScreen ? 'none' : 'block' }}>Exchange your hard-earned currency for things you probably don't need!</span>
+          <span className="shop-heading" style={{ display: loadingScreen ? 'none' : 'block' }}>
+            Shop our eclectic selection of precisely 20 items!
+          </span>
           <div className='loading-container' style={{ display: loadingScreen ? 'flex' : 'none' }}>
             <div className="loading-screen">LOADING . . .</div>
           </div>

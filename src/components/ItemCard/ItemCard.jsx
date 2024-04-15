@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './item-card.css';
 
-const ItemCard = ({ id, title, price, description, image, rating, cart, setCart }) => {
+const ItemCard = ({ id, title, price, description, image, rating, cart = [], setCart }) => {
 
     const [itemAmount, setItemAmount] = useState(1);
 

@@ -9,7 +9,7 @@ const Cart = ({ cart, setCart }) => {
     useEffect(() => {
       tallyTotal();
       window.scrollTo(0,0);
-    });
+    }, [cart]);
 
     function tallyTotal() {
       let subtotal = 0;
